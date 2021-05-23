@@ -2,6 +2,5 @@
 
 ## authors
 
-### Or Linzer
-
-### Hilal Sharkaui
+Or Linzer
+Hilal Sharkaui

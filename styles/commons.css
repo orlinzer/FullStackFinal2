@@ -2,6 +2,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+
+  margin: 0;
 }
 
 html {
@@ -9,6 +11,9 @@ html {
 }
 
 body {
+  width: 100vw;
+  min-height: 100vh;
+
   font-size: 2rem;
 
   display: flex;
@@ -20,18 +25,43 @@ body {
 
   justify-content: start;
   justify-items: start;
+
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 header {
-  height: 2rem;
+  width: 100%;
+  height: 4rem;
+
+  background-color: #161;
 }
 
 main {
+  width: 100%;
+
   flex-grow: 1;
+
+  background-color: #5f5;
 }
 
 footer {
-  height: 2rem;
+  width: 100%;
+  height: 4rem;
+
+  background-color: #161;
+}
+
+nav {
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+  align-content: center;
+
+  justify-content: start;
+  justify-items: start;
 }
 
 h1 {

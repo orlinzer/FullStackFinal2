@@ -26,10 +26,11 @@ a:visited {
   color: var(--theme-color);
 }
 
-a:focus {
+*:focus {
   /* border: 1px solid black; */
   /* border-radius: 5px; */
-  outline: 1px blue solid;
+  /* outline: 1px blue solid; */
+  outline: none;
 }
 
 :root,
@@ -131,13 +132,13 @@ header img {
   width: 21px;
   height: 3px;
 
-  background-color: var(--theme-color);
+  background-color: var(--theme-secondary-color);
   margin: 3px 0;
   transition: 0.5s;
 }
 
 .open-menu .menu-button-1 {
-  -webkit-transform: rotate(-45deg) translate(-7px, 7px);
+  -webkit-transform: rotate(-45deg) translate(-4.5px, 4px);
   transform: rotate(-45deg) translate(-4.5px, 4px);
 }
 
@@ -146,7 +147,7 @@ header img {
 }
 
 .open-menu .menu-button-3 {
-  -webkit-transform: rotate(45deg) translate(-7px, -7px);
+  -webkit-transform: rotate(45deg) translate(-4.5px, -4px);
   transform: rotate(45deg) translate(-4.5px, -4px);
 }
 
@@ -165,7 +166,7 @@ h1 {
   /* height: 1.2em; */
   height: 80%;
 
-  /* color: var(--theme-secondary-color); */
+  color: var(--theme-secondary-color);
   opacity: 0;
 
   transition: opacity 0.5s linear;
@@ -209,14 +210,14 @@ h1 {
   background: transparent;
   /* DBG */
   /* background: white; */
-  color: var(--theme-color);
+  color: var(--theme-secondary-color);
   /* padding: 20px 100px 20px 20px; */
   /* font-size:  */
 
   width: 16px;
   height: 16px;
   border-radius: 16px;
-  border: 3px solid var(--theme-color);
+  border: 3px solid var(--theme-secondary-color);
   display: block;
   position: relative;
   /* transition: width 0.5s ease, height 0.5s ease; */
@@ -277,7 +278,7 @@ h1 {
   left: 32px;
   top: 29px;
   display: block;
-  background-color: var(--theme-color);
+  background-color: var(--theme-secondary-color);
   transform: rotate(-45deg);
   transition: all 0.5s ease;
 }
@@ -290,7 +291,7 @@ h1 {
   left: 35px;
   top: 32px;
   display: block;
-  background-color: var(--theme-color);
+  background-color: var(--theme-secondary-color);
   transform: rotate(-45deg);
   transition: all 0.5s ease;
 }
@@ -436,6 +437,8 @@ main {
   flex-grow: 1;
 
   background-color: var(--theme-background-color);
+
+  padding: 0.5em 1em;
 }
 
 footer {
@@ -467,8 +470,20 @@ footer {
   content: url("../icons/light_mode/light_mode_white_24dp.svg");
 }
 
-:root.dark .menu-button {
-  /* content: url("../icons/menu/menu_white_24dp.svg"); */
+:root.dark .home-button {
+  content: url("../icons/home/home_white_24dp.svg");
+}
+
+:root.dark .catalog-button {
+  content: url("../icons/collections/collections_white_24dp.svg");
+}
+
+:root.dark .stories-button {
+  content: url("../icons/auto_stories/auto_stories_white_24dp.svg");
+}
+
+:root.dark .cart-button {
+  content: url("../icons/shopping_cart/shopping_cart_white_24dp.svg");
 }
 
 /* #endregion theme */

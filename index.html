@@ -8,36 +8,78 @@
     <link rel="shortcut icon" href="logo/logo.svg" type="image/svg+xml" />
     <title>A++</title>
 
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/commons.css" />
+    <link rel="stylesheet" href="styles/normalize.css" charset="utf-8" />
+    <link rel="stylesheet" href="styles/commons.css" charset="utf-8" />
+
+    <script
+      src="scripts/commons.js"
+      type="application/javascript"
+      charset="utf-8"
+      defer
+    ></script>
   </head>
   <body>
+    <noscript>Your computer not running JavaScript.</noscript>
     <header>
-      <a href="" title="Menu"
-        ><img src="icons/menu/menu_white_24dp.svg" alt="Menu"
-      /></a>
+      <button title="Menu" id="menu-button">
+        <!-- <a href="" title="Menu" id="menu-button"> -->
+        <!-- <img
+          class="menu-button"
+          src="icons/menu/menu_white_24dp.svg"
+          alt="Menu"
+          width="30"/> -->
+        <div class="menu-button">
+          <div class="menu-button-1"></div>
+          <div class="menu-button-2"></div>
+          <div class="menu-button-3"></div>
+        </div>
+        <!-- </a> -->
+      </button>
       <a href="" title="Home">
-        <img src="logo/logo.svg" alt="A++ Logo" class="logo" />
+        <img
+          src="logo/logo.svg"
+          alt="A++ Logo"
+          class="logo-button"
+          width="40"
+        />
         <h1>Stop Failing</h1>
       </a>
       <span class="middle-space"></span>
-      <a href="" class="search">
-        <img src="icons/search/search_white_24dp.svg" alt="Search"
-      /></a>
-      <a href="" class="brightness" title="Switch to dark theme">
+
+      <form action="" class="search">
+        <input type="search" class="search-box" />
+        <span class="search-button" id="search-button" title="Search">
+          <span class="search-icon"></span>
+        </span>
+      </form>
+      <!-- <input
+        class="search-button"
+        type="submit"
+        value=""
+        width="30"
+        style=""
+      /> -->
+      <button class="brightness" id="theme-button" title="Switch to dark theme">
         <img
-          src="icons/brightness_low/brightness_low_white_24dp.svg"
+          class="brightness-button"
+          src="icons/dark_mode/dark_mode_black_24dp.svg"
           alt="Brightness_low"
-      /></a>
+          width="30"
+        />
+      </button>
     </header>
     <div class="container1">
-      <aside>
+      <aside id="menu" class="menu">
         <nav>
           <ul>
             <li>
               <a href="" title="Home">
-                <img src="icons/home/home_white_24dp.svg" alt="Home" />
-                Home
+                <img
+                  src="icons/home/home_white_24dp.svg"
+                  alt="Home"
+                  width="30"
+                />
+                <p>Home</p>
               </a>
             </li>
             <li>
@@ -45,17 +87,19 @@
                 <img
                   src="icons/collections/collections_white_24dp.svg"
                   alt="Catalog"
+                  width="30"
                 />
-                Catalog
+                <p>Catalog</p>
               </a>
             </li>
             <li>
               <a href="" title="Stories">
                 <img
-                  src="icons/auto_stories/auto_stories_white_24dp.svg"
+                  src="icons/auto_stories/auto_stories_24dp.svg"
                   alt="Stories"
+                  width="30"
                 />
-                Stories
+                <p>Stories</p>
               </a>
             </li>
             <li>
@@ -63,8 +107,9 @@
                 <img
                   src="icons/shopping_cart/shopping_cart_white_24dp.svg"
                   alt="Catalog"
+                  width="30"
                 />
-                Cart
+                <p>Cart</p>
               </a>
             </li>
           </ul>

@@ -4,7 +4,259 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <link
+      rel="shortcut icon"
+      href="logo/logo_black_64dp.svg"
+      type="image/svg+xml"
+    />
+    <title>Garage Sale</title>
+
+    <link rel="stylesheet" href="styles/normalize.css" charset="utf-8" />
+    <link rel="stylesheet" href="styles/commons.css" charset="utf-8" />
+    <link rel="stylesheet" href="styles/shop.css" charset="utf-8" />
+
+    <script
+      src="scripts/commons.js"
+      type="application/javascript"
+      charset="utf-8"
+      defer
+    ></script>
   </head>
-  <body></body>
+  <body>
+    <noscript>Your computer not running JavaScript.</noscript>
+    <header>
+      <button title="Menu" id="menu-button">
+        <!-- <a href="" title="Menu" id="menu-button"> -->
+        <!-- <img
+          class="menu-button"
+          src="icons/menu/menu_white_24dp.svg"
+          alt="Menu"
+          width="30"/> -->
+        <div class="menu-button">
+          <div class="menu-button-1"></div>
+          <div class="menu-button-2"></div>
+          <div class="menu-button-3"></div>
+        </div>
+        <!-- </a> -->
+      </button>
+      <a href="" title="Home">
+        <img
+          src="logo/logo_black_64dp.svg"
+          alt="Garage Sale Logo"
+          class="logo-button"
+          id="logo-button"
+          width="40"
+        />
+        <h1>Garage Sale</h1>
+      </a>
+      <span class="middle-space"></span>
+      <form action="" class="search" id="search">
+        <input type="search" class="search-box" id="search-box" />
+        <span class="search-button" id="search-button" title="Search">
+          <span class="search-icon"></span>
+        </span>
+      </form>
+      <button class="brightness" id="theme-button" title="Switch to dark theme">
+        <img
+          class="brightness-button"
+          src="icons/dark_mode/dark_mode_black_24dp.svg"
+          alt="Brightness_low"
+          width="30"
+        />
+      </button>
+    </header>
+    <div class="container1">
+      <aside id="menu" class="menu">
+        <nav>
+          <ul>
+            <li>
+              <a href="index.html" title="Home">
+                <img
+                  class="home-button"
+                  src="icons/home/home_black_24dp.svg"
+                  alt="Home"
+                  width="30"
+                />
+                <p>Home</p>
+              </a>
+            </li>
+            <li>
+              <a href="catalog.html" title="Catalog">
+                <img
+                  class="catalog-button"
+                  src="icons/collections/collections_black_24dp.svg"
+                  alt="Catalog"
+                  width="30"
+                />
+                <p>Catalog</p>
+              </a>
+            </li>
+            <li>
+              <a href="stories.html" title="Stories">
+                <img
+                  class="stories-button"
+                  src="icons/auto_stories/auto_stories_black_24dp.svg"
+                  alt="Stories"
+                  width="30"
+                />
+                <p>Stories</p>
+              </a>
+            </li>
+            <li>
+              <a href="shop.html" title="Cart">
+                <img
+                  class="cart-button"
+                  src="icons/shopping_cart/shopping_cart_black_24dp.svg"
+                  alt="Catalog"
+                  width="30"
+                />
+                <p>Cart</p>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+      <div class="container2">
+        <main>
+          <form action="" method="POST" name="cart" id="cart" class="cart">
+            <fieldset>
+              <legend>Personal Information</legend>
+              <div title="Given Name">
+                <label for="input-given-name">Given Name</label>
+                <input
+                  type="text"
+                  autocomplete="given-name"
+                  name="input-given-name"
+                  id="input-given-name"
+                  placeholder="Given Name"
+                />
+              </div>
+              <div title="Additional Name">
+                <label for="input-additional-name">Additional Name</label>
+                <input
+                  type="text"
+                  autocomplete="additional-name"
+                  name="input-additional-name"
+                  id="input-additional-name"
+                  placeholder="Additional Name"
+                />
+              </div>
+              <div title="Family Name">
+                <label for="input-family-name">Family Name</label>
+                <input
+                  type="text"
+                  autocomplete="family-name"
+                  name="input-family-name"
+                  id="input-family-name"
+                  placeholder="Family Name"
+                />
+              </div>
+              <div title="Country">
+                <label for="input-country">Country</label>
+                <input
+                  type="text"
+                  autocomplete="country | country-name | address-line1"
+                  name="input-country"
+                  id="input-country"
+                  placeholder="Country"
+                />
+              </div>
+              <div title="Address">
+                <label for="input-street-address">Address</label>
+                <input
+                  type="text"
+                  autocomplete="street-address | address-line2"
+                  name="input-street-address"
+                  id="input-street-address"
+                  placeholder="Address"
+                />
+              </div>
+              <div title="Area Code">
+                <label for="input-mobile-mobile-area-code">Area Code</label>
+                <select
+                  type="tel"
+                  autocomplete="tel-area-code"
+                  name="input-mobile-mobile-area-code"
+                  id="input-mobile-mobile-area-code"
+                  placeholder="Area Code"
+                >
+                  <option value="+1">+1</option>
+                  <option value="+972">+972</option>
+                </select>
+              </div>
+              <div title="Mobile Number">
+                <label for="input-mobile">Mobile Number</label>
+                <input
+                  type="tel"
+                  autocomplete="mobile"
+                  name="input-mobile"
+                  id="input-mobile"
+                  placeholder="Mobile Number"
+                />
+              </div>
+              <div title="Area Code">
+                <label for="input-tel-area-code">Area Code</label>
+                <input
+                  type="tel"
+                  autocomplete="tel-area-code"
+                  name="input-tel-area-code"
+                  id="input-tel-area-code"
+                  placeholder="Area Code"
+                />
+              </div>
+              <div title="Phone Number">
+                <label for="input-tel">Phone Number</label>
+                <input
+                  type="tel"
+                  autocomplete="tel"
+                  name="input-tel"
+                  id="input-tel"
+                  placeholder="Phone Number"
+                />
+              </div>
+              <div title="Email">
+                <label for="input-email">Email</label>
+                <input
+                  type="text"
+                  autocomplete="email"
+                  name="input-email"
+                  id="input-email"
+                  placeholder="Email"
+                />
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Items</legend>
+              <div title="Item 1">
+                <label for="input-item-1">Item 1</label>
+                <input type="checkbox" name="input-item" id="input-item-1" />
+              </div>
+              <div title="Item 2">
+                <label for="input-item-2">Item 2</label>
+                <input type="checkbox" name="input-item" id="input-item-2" />
+              </div>
+              <div title="Item 3">
+                <label for="input-item-3">Item 3</label>
+                <input type="checkbox" name="input-item" id="input-item-3" />
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Summary</legend>
+              <div>
+                <input type="reset" value="Empty Cart" title="Empty Cart" />
+                <input type="submit" value="Order" title="Order" />
+              </div>
+            </fieldset>
+          </form>
+        </main>
+        <footer>
+          <p>
+            Authors: <strong><i>Or Linzer</i></strong> and
+            <strong><i>Hilal Sharkaui</i></strong>
+          </p>
+        </footer>
+      </div>
+    </div>
+  </body>
 </html>

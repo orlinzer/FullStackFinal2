@@ -1,0 +1,60 @@
+main {
+  display: grid;
+
+  grid-template-columns: repeat(1, 1fr);
+  /* grid-template-columns: repeat(1, 200px); */
+
+  gap: 1em;
+}
+
+@media screen and (min-width: 400px) {
+  main {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 600px) {
+  main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 800px) {
+  main {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+main img {
+  border-radius: 1em;
+
+  width: 100%;
+  height: 100%;
+
+  image-rendering: optimizeSpeed;
+  object-fit: cover;
+
+  /* cursor: pointer; */
+
+  /* transition-delay: 0;
+  transition-duration: 0.2s;
+  transition-property: transform;
+  transition-timing-function: linear; */
+}
+
+main a {
+  transition-delay: 0;
+  transition-duration: 0.2s;
+  transition-property: transform;
+  transition-timing-function: linear;
+}
+
+main a:hover {
+  transform: scale(1.1);
+}

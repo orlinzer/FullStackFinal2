@@ -13,8 +13,7 @@ main {
 }
 
 form.cart {
-  width: 70%;
-  min-width: max-content;
+  width: max-content;
 
   display: flex;
 
@@ -31,15 +30,16 @@ form.cart {
 
 form.cart fieldset {
   width: 100%;
-  min-width: max-content;
+
+  border-radius: 1em;
 }
 
-/* #region label-placeholder */
-
-/* TODO: required */
+/* #region input */
 
 .input-section {
   margin: 0.5em 0.25em;
+
+  min-width: max-content;
 }
 
 .input-box {
@@ -56,12 +56,19 @@ span.input-box {
   display: inline-block;
 }
 
+span.input-box:first-child .input {
+  width: 5em;
+}
+span.input-box:not(:first-child) .input {
+  width: 14.75em;
+}
+
 .input {
   display: inline-block;
 
   padding: 0.5em 1em;
 
-  /* TODO: min-width: label-max-content; */
+  width: 20em;
   height: 2em;
 
   border-radius: 1em;
@@ -72,15 +79,15 @@ span.input-box {
   background-color: #fff;
 }
 
-.input:not(:focus):invalid {
+.input.seen:not(:focus):invalid {
   background-color: #f77;
 }
 
-.input:not(:focus):invalid ~ .label-placeholder > .error {
+.input.seen:not(:focus):invalid ~ .label-placeholder > .error {
   display: inline;
 }
 
-.input:not(:focus):invalid ~ .label-placeholder > .title {
+.input.seen:not(:focus):invalid ~ .label-placeholder > .title {
   display: none;
 }
 
@@ -120,4 +127,35 @@ span.input-box {
   opacity: 1;
 }
 
-/* #endregion label-placeholder */
+.input[type="number"] {
+  width: 5em;
+}
+
+.input[type="submit"],
+.input[type="reset"] {
+  border-radius: 1rm;
+  width: min-content;
+  padding: 0.4em 1em;
+  font-size: 1em;
+  cursor: pointer;
+  background-color: #ccc;
+}
+
+/* #endregion input */
+
+/* #region list-table*/
+
+.list-table {
+  text-align: left;
+}
+
+.list-table-name {
+  width: 100%;
+}
+
+.list-table th:first-child,
+.list-table td:first-child {
+  padding-right: 1em;
+}
+
+/* #endregion list-table*/

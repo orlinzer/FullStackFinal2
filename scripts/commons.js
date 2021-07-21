@@ -4,6 +4,24 @@ var themeButton;
 var menuButton;
 var searchButton;
 
+function loadWebStorage () {
+  // Web Storage API
+  if (typeof(Storage) !== "undefined") {
+    //
+    if (!localStorage.theme) {
+      localStorage.theme = 'light';
+    } else if (localStorage.theme == 'dark') {
+      document.documentElement.classList.add('dark');
+    }
+
+    if (!sessionStorage.cart) {
+      sessionStorage.cart = {};
+    }
+  } else {
+    console.error("Can't use Web Storage API!");
+  }
+}
+
 /**
  * @type HTMLInputElement
  */
@@ -17,6 +35,16 @@ var searchForm;
 
 function toggleTheme (e) {
   document.documentElement.classList.toggle('dark');
+
+  // save theme preferences in Web Storage API
+  if (typeof(Storage) !== "undefined") {
+    if (document.documentElement.classList.contains('dark')) {
+      localStorage.theme = 'dark';
+    } else {
+      localStorage.theme = 'light';
+    }
+    // console.log(localStorage.theme);
+  }
 }
 
 function toggleMenu (e) {
@@ -39,6 +67,10 @@ function closeSearch (e) {
   }, 200);
 }
 
+function preload () {
+  loadWebStorage();
+}
+
 function load () {
   // menu = document.getElementById('menu');
   themeButton = document.getElementById('theme-button');
@@ -51,6 +83,9 @@ function load () {
   menuButton.onclick = toggleMenu;
   searchButton.onclick = openSearch;
   searchBox.onblur = closeSearch;
+
+  // loadWebStorage();
 }
 
+preload();
 window.onload = load;

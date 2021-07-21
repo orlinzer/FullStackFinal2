@@ -13,7 +13,7 @@ main {
 }
 
 figure {
-  position: relative;
+  /* position: relative; */
 
   width: 100%;
 }
@@ -30,14 +30,14 @@ figure {
   }
 }
 
-figure img {
+/* figure img {
   width: 100%;
   height: 100%;
 
   border-radius: 1em;
-}
+} */
 
-figcaption {
+/* figcaption {
   position: absolute;
 
   width: 100%;
@@ -45,4 +45,4 @@ figcaption {
   margin: auto;
 
   text-align: center;
-}
+} */

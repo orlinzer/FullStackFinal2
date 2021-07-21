@@ -1,37 +1,4 @@
-main {
-  display: grid;
-
-  grid-template-columns: repeat(2, 1fr);
-
-  gap: 1em;
-}
-
-.horizontal-image {
-  grid-column-end: span 2;
-}
-
-.vertical-image {
-  grid-row-end: span 2;
-}
-
-.big-squer-image {
-  grid-column-end: span 2;
-  grid-row-end: span 2;
-}
-
-@media screen and (min-width: 500px) {
-  main {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  main {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-
-/* figure {
+figure {
   position: relative;
 
   display: flex;
@@ -46,11 +13,11 @@ main {
   transition-timing-function: linear;
 
   cursor: pointer;
-} */
+}
 
 /* Not Allowed */
 /* object-fit: cover; */
-/* figure img {
+figure img {
   transition-delay: 0;
   transition-duration: 0.2s;
   transition-property: all;
@@ -62,10 +29,9 @@ main {
   height: 100%;
 
   image-rendering: optimizeSpeed;
+}
 
-} */
-
-/* figcaption {
+figcaption {
   position: absolute;
 
   width: 100%;
@@ -82,16 +48,16 @@ main {
   transition-duration: 0.2s;
   transition-property: opacity;
   transition-timing-function: linear;
-} */
+}
 
-/* figure:hover {
+figure:hover {
   transform: scale(1.05);
-} */
+}
 
-/* figure:hover img {
+figure:hover img {
   opacity: 0.5;
-} */
+}
 
-/* figure:hover figcaption {
+figure:hover figcaption {
   opacity: 1;
-} */
+}

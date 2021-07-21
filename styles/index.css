@@ -1,0 +1,7 @@
+main > * {
+  margin: 1em;
+}
+
+main > ul {
+  margin-left: 2em;
+}

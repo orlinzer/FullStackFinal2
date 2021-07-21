@@ -39,8 +39,8 @@ main img {
 
   image-rendering: optimizeSpeed;
 
-  /* TODO: remove */
-  object-fit: cover;
+  /* Not Allowed */
+  /* object-fit: cover; */
 
   /* cursor: pointer; */
 

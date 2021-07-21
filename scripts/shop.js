@@ -1,3 +1,8 @@
+/*
+ * @authors Or Linzer and Hilal Sharkawi
+ * @file shop.js
+ */
+
 'use strict';
 
 /**

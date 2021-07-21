@@ -1,3 +1,8 @@
+/*
+ * @authors Or Linzer and Hilal Sharkawi
+ * @file commons.css
+ */
+
 /* #region general */
 
 *,
@@ -524,7 +529,7 @@ footer {
 
 /* #region responsive */
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 500px) {
   /* #region  header */
 
   /* #region logo-button */

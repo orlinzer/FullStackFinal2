@@ -1,3 +1,8 @@
+/*
+ * @authors Or Linzer and Hilal Sharkawi
+ * @file commons.js
+ */
+
 'use strict'
 
 var themeButton;
@@ -15,7 +20,7 @@ function loadWebStorage () {
     }
 
     if (!sessionStorage.cart) {
-      sessionStorage.cart = {};
+      sessionStorage.cart = JSON.stringify([]);
     }
   } else {
     console.error("Can't use Web Storage API!");

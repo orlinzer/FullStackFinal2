@@ -1,3 +1,8 @@
+/*
+ * @authors Or Linzer and Hilal Sharkawi
+ * @file catalog.css
+ */
+
 main {
   display: grid;
 
@@ -43,7 +48,6 @@ main {
   border-radius: 1em;
 
   background-color: var(--theme-color);
-  /* background-image: url("../icons/done/done_white_24dp.svg"); */
   background-image: url("../icons/done/done_yellow_24dp.svg");
   background-position: center;
   background-repeat: no-repeat;
@@ -59,7 +63,7 @@ main {
   transition-timing-function: linear;
 }
 
-.select-marker.selected {
+.selected .select-marker {
   opacity: 1;
 }
 

@@ -1,3 +1,8 @@
+/*
+ * @authors Or Linzer and Hilal Sharkawi
+ * @file stories.css
+ */
+
 main {
   display: flex;
 
@@ -18,7 +23,7 @@ figure {
 
 @media screen and (min-width: 500px) {
   figure {
-    width: 50%;
+    width: 40%;
   }
 }
 

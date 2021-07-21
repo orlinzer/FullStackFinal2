@@ -1,3 +1,6 @@
+<!-- @authors Or Linzer and Hilal Sharkawi -->
+<!-- @file shop.html -->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -13,39 +16,23 @@
 
     <title>Garage Sale</title>
 
-    <link rel="stylesheet" href="styles/normalize.css" charset="utf-8" />
-    <link rel="stylesheet" href="styles/commons.css" charset="utf-8" />
-    <link rel="stylesheet" href="styles/shop.css" charset="utf-8" />
+    <link rel="stylesheet" href="styles/normalize.css" />
+    <link rel="stylesheet" href="styles/commons.css" />
+    <link rel="stylesheet" href="styles/shop.css" />
 
-    <script
-      src="scripts/commons.js"
-      type="application/javascript"
-      charset="utf-8"
-    ></script>
-    <script
-      src="scripts/shop.js"
-      type="application/javascript"
-      charset="utf-8"
-      defer
-    ></script>
+    <script src="scripts/commons.js"></script>
+    <script src="scripts/shop.js" defer></script>
   </head>
   <body>
     <noscript>Your computer not running JavaScript.</noscript>
     <header>
-      <button title="Menu" id="menu-button">
-        <!-- <a href="" title="Menu" id="menu-button"> -->
-        <!-- <img
-          class="menu-button"
-          src="icons/menu/menu_white_24dp.svg"
-          alt="Menu"
-          width="30"/> -->
+      <div title="Menu" id="menu-button">
         <div class="menu-button">
           <div class="menu-button-1"></div>
           <div class="menu-button-2"></div>
           <div class="menu-button-3"></div>
         </div>
-        <!-- </a> -->
-      </button>
+      </div>
       <a href="" title="Home">
         <img
           src="logo/logo_black_64dp.svg"
@@ -57,7 +44,7 @@
         <h1>Garage Sale</h1>
       </a>
       <span class="middle-space"></span>
-      <form action="" class="search" id="search">
+      <form action="GET" class="search" id="search">
         <input type="search" class="search-box" id="search-box" />
         <span class="search-button" id="search-button" title="Search">
           <span class="search-icon"></span>
@@ -125,7 +112,7 @@
       </aside>
       <div class="container2">
         <main>
-          <form action="" method="GET" name="cart" id="cart" class="cart">
+          <form action="./" method="GET" name="cart" id="cart" class="cart">
             <fieldset>
               <legend>Personal Information</legend>
 
@@ -184,16 +171,14 @@
 
               <div title="Country" class="input-box input-section">
                 <select
-                  type="text"
-                  autocomplete="country | country-name | address-line1"
+                  autocomplete="country"
                   required
                   name="input-country"
                   id="input-country"
                   class="input"
-                  value=""
                   onchange="this.setAttribute('value', this.value);"
                 >
-                  <option value=""></option>
+                  <option value="">Please Select</option>
                   <option value="Israel">Israel</option>
                   <option value="China">China</option>
                   <option value="India">India</option>
@@ -214,14 +199,12 @@
 
               <div title="Address" class="input-box input-section">
                 <input
-                  type="text"
-                  autocomplete="street-address | address-line2"
+                  autocomplete="address-level1"
                   pattern=".{2,}"
                   required
                   name="input-street-address"
                   id="input-street-address"
                   class="input"
-                  value=""
                   onchange="this.setAttribute('value', this.value);"
                 />
                 <label class="label-placeholder" for="input-street-address">
@@ -233,15 +216,13 @@
               <div class="input-section">
                 <span title="Area Code" class="input-box">
                   <select
-                    type="tel"
                     autocomplete="tel-area-code"
                     name="input-mobile-mobile-area-code"
                     id="input-mobile-mobile-area-code"
                     class="input"
-                    value=""
                     onchange="this.setAttribute('value', this.value);"
                   >
-                    <option value=""></option>
+                    <option value="">Please Select</option>
                     <option value="+1">+1</option>
                     <option value="+7">+7</option>
                     <option value="+52">+52</option>
@@ -285,15 +266,13 @@
               <div class="input-section">
                 <span title="Area Code" class="input-box">
                   <select
-                    type="tel"
                     autocomplete="tel-area-code"
                     name="input-tel-area-code"
                     id="input-tel-area-code"
                     class="input"
-                    value=""
                     onchange="this.setAttribute('value', this.value);"
                   >
-                    <option value=""></option>
+                    <option value="">Please Select</option>
                     <option value="+1">+1</option>
                     <option value="+7">+7</option>
                     <option value="+52">+52</option>
@@ -352,6 +331,7 @@
             <fieldset>
               <legend>Items</legend>
 
+              <!-- TODO: For the future -->
               <!-- TODO: add recycle bin -->
               <!-- TODO: control custom the counter by a script -->
               <!-- TODO: design the images like in the catalog -->
@@ -379,7 +359,7 @@
                   </td>
                   <td>
                     <img
-                      src="images/items/alexunder-hess-bWZAPKm0zZE-unsplash.jpg"
+                      src="images/items/a1.jpg"
                       width="100"
                       height="100"
                       alt=""
@@ -405,7 +385,7 @@
                   </td>
                   <td>
                     <img
-                      src="images/items/anne-nygard-fHu3Orw8UB8-unsplash.jpg"
+                      src="images/items/b1.jpg"
                       width="100"
                       height="100"
                       alt=""
@@ -431,7 +411,7 @@
                   </td>
                   <td>
                     <img
-                      src="images/items/craig-garner-YoadQb46v6k-unsplash.jpg"
+                      src="images/items/c1.jpg"
                       width="100"
                       height="100"
                       alt=""

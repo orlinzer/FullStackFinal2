@@ -2,20 +2,15 @@ main {
   display: grid;
 
   grid-template-columns: repeat(2, 1fr);
-  /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); */
-  /* grid-template-columns: repeat(1, 200px); */
-  /* grid-template-columns: auto */
 
   gap: 1em;
 }
 
 .horizontal-image {
-  /* grid-area: ; */
   grid-column-end: span 2;
 }
 
 .vertical-image {
-  /* grid-area: ; */
   grid-row-end: span 2;
 }
 
@@ -24,23 +19,11 @@ main {
   grid-row-end: span 2;
 }
 
-/* @media screen and (min-width: 600px) {
-  main {
-    grid-template-columns: repeat(3, 1fr);
-  }
-} */
-
 @media screen and (min-width: 500px) {
   main {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
-/* @media screen and (min-width: 1000px) {
-  main {
-    grid-template-columns: repeat(5, 1fr);
-  }
-} */
 
 @media screen and (min-width: 1000px) {
   main {
@@ -53,7 +36,6 @@ main img {
 
   width: 100%;
   height: 100%;
-  /* height: auto; */
 
   image-rendering: optimizeSpeed;
 
@@ -68,13 +50,55 @@ main img {
   transition-timing-function: linear; */
 }
 
-main a {
+figure {
+  position: relative;
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+
   transition-delay: 0;
   transition-duration: 0.2s;
-  transition-property: transform;
+  transition-property: all;
   transition-timing-function: linear;
 }
 
-main a:hover {
-  transform: scale(1.1);
+figure img {
+  transition-delay: 0;
+  transition-duration: 0.2s;
+  transition-property: all;
+  transition-timing-function: linear;
+}
+
+figcaption {
+  position: absolute;
+
+  width: 100%;
+  height: auto;
+  margin: auto;
+
+  text-align: center;
+
+  z-index: 1;
+
+  opacity: 0;
+
+  transition-delay: 0;
+  transition-duration: 0.2s;
+  transition-property: opacity;
+  transition-timing-function: linear;
+}
+
+figure:hover {
+  transform: scale(1.05);
+}
+
+figure:hover img {
+  opacity: 0.5;
+}
+
+figure:hover figcaption {
+  opacity: 1;
 }

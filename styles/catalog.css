@@ -63,6 +63,8 @@ figure {
   transition-duration: 0.2s;
   transition-property: all;
   transition-timing-function: linear;
+
+  cursor: pointer;
 }
 
 figure img {
